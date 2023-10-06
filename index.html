@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Grupo 3 Quetzalcoatl</title>
+    <style>
+       
+        header {
+            background-color: #1722b9; 
+            color: #FFF; 
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #1565C0; 
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 10px;
+            position: relative;
+        }
+
+        nav li a {
+            color: #FFF; 
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1565C0; 
+            padding: 10px;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        article {
+            background-color: #000000; 
+            color: #FFF;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        article h2 {
+            color: #1565C0; 
+        }
+
+        footer {
+            background-color: #0400ff; 
+            color: #FFF; 
+            text-align: center;
+            padding: 10px;
+        }
+
+       
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grupo 3 Quetzalcoatl</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+            <li><a href="#" onclick="mostrarSeccion('acerca')">Acerca de</a></li>
+            <li><a href="#" onclick="mostrarSeccion('Contacto')">Contacto</a></li>
+            <li>
+                <a href="#">Comunidad</a>
+                <ul>
+                    <li><a href="#" onclick="mostrarSeccion('comunidad')">Comunidad</a></li>
+                    <li><a href="#" onclick="mostrarSeccion('equipos')">Equipos</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <article id="inicio">
+            <h2>¿Qué es ser scout?</h2>
+            <p>Ser scout es formar parte de un movimiento educativo mundial, el cual busca desarrollar habilidades y valores en los jóvenes para que sean ciudadanos comprometidos, responsables, solidarios y respetuosos.</p>
+            <h2>Origen del Movimiento Scout</h2>
+            <p>El movimiento scout fue fundado por <span style="color: #1565C0;">Lord Robert Baden-Powell</span> en 1907. Baden-Powell fue un militar británico que adaptó sus experiencias en el ejército para crear un sistema de educación no formal enfocado en la naturaleza y el trabajo en equipo.</p>
+            <h2>El scoutismo llega a México</h2>
+            <p>El movimiento scout llegó a México en 1920, cuando un grupo de jóvenes mexicanos asistió a un campamento scout en Estados Unidos. A partir de ese momento, se establecieron los primeros grupos scouts en México, y el movimiento ha crecido y prosperado desde entonces.</p>
+        </article>
+        <article id="acerca">
+            <h2>Acerca de</h2>
+            <p>Esta es una página desarrollada para el conocimiento scout y desarrollada por el mismo.</p>
+            <h2>Equipo Aztlan</h2>
+            <p>El equipo Aztlan está conformado por: Eduardo Iglesias, Paulina Diaz, Ali Torres, Francisco Mendietta</p>
+        </article>
+        <article id="comunidad">
+            <h2>Comunidad Scout</h2>
+            <p>En el movimiento scout, una comunidad es un grupo de jóvenes scouts que se unen para compartir experiencias, aprender juntos y desarrollar amistades duraderas. Las comunidades suelen estar formadas por varios equipos scout.</p>
+            <h2>Equipos Scout</h2>
+            <p>Un equipo scout es un grupo más pequeño dentro de la comunidad, generalmente compuesto por jóvenes de la misma edad o etapa de desarrollo. Los equipos scout trabajan juntos en actividades, juegos y proyectos para fortalecer el trabajo en equipo y fomentar el compañerismo.</p>
+        </article>
+        <article id="equipos">
+            <h2>Equipos</h2>
+            <p>El Grupo 3 Quetzalcoatl cuenta con 3 equipos de la comunidad</p>
+            <h2>Equipo Ahuitzotl</h2>
+            <p>Está conformado por Marbella y Ernesto</p>
+            <h2>Equipo Aztlan</h2>
+            <p>Está conformado por Paulina, Ali, Eduardo y Francisco</p>
+            <h2>Equipo Teocali</h2>
+            <p>Está conformado por Lorena, Itzel, Val y Biali</p>
+        </article>
+        
+       
+        <article id="Contacto">
+            <h2>Contacto</h2>
+            <p>Número de celular: 5525338668</p>
+            <p>Facebook: facebook.com/tu_perfil</p>
+            <p>Instagram: instagram.com/tu_perfil</p>
+            
+            <p>Para contactarnos, envía un correo electrónico a: <a href="mailto:iglesiaseduardo65@gmail.com">iglesiaseduardo65@gmail.com</a></p>
+        </article>
+    </main>
+    <footer>
+        <p>Derechos de autor &copy; 2023 - Eduardo Iglesias</p>
+    </footer>
+
+    <script>
+        
+        function mostrarSeccion(seccion) {
+            
+            const secciones = document.querySelectorAll('article');
+            secciones.forEach(seccion => {
+                seccion.style.display = 'none';
+            });
+
+            
+            const seccionSeleccionada = document.getElementById(seccion);
+            seccionSeleccionada.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+</html>
